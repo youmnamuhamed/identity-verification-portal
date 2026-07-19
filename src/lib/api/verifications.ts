@@ -26,3 +26,4 @@ export async function listVerifications(): Promise<VerificationListItem[]> {
     await apiClient.get<VerificationListItem[]>("/verifications");
   return data;
 }
+
