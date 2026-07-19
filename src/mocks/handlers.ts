@@ -17,10 +17,15 @@ export const handlers = [
     const body = (await request.json()) as CreateVerificationPayload;
 
     // Basic server-side style validation, mirrors what client-side zod already checks
-    if (!body.first_name || !body.last_name || !body.email || !body.document_type) {
+    if (
+      !body.first_name ||
+      !body.last_name ||
+      !body.email ||
+      !body.document_type
+    ) {
       return HttpResponse.json(
         { message: "Missing required fields." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -45,7 +50,7 @@ export const handlers = [
     if (!record) {
       return HttpResponse.json(
         { message: "Verification not found." },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -59,6 +64,7 @@ export const handlers = [
     const list: VerificationListItem[] = db.list().map((v) => ({
       id: v.id,
       email: v.email,
+      document_type: v.document_type,
       status: v.status,
       created_at: v.created_at,
     }));
@@ -66,4 +72,3 @@ export const handlers = [
     return HttpResponse.json(list, { status: 200 });
   }),
 ];
-

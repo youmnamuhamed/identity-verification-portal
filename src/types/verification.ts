@@ -22,6 +22,7 @@ export interface Verification {
 export interface VerificationListItem {
   id: string;
   email: string;
+  document_type: DocumentType;
   status: VerificationStatus;
   created_at: string;
 }

@@ -16,7 +16,7 @@ export default function VerificationsPage() {
 
   return (
     <main className="flex-1 px-4 py-10">
-      <div className="mx-auto w-full max-w-3xl">
+      <div className="mx-auto w-full max-w-5xl">
         <div className="mb-6 flex items-center justify-between">
           <div>
             <h1 className="text-xl font-semibold text-ink">Verifications</h1>
