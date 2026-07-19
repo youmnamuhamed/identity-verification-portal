@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MSWProvider } from "@/mocks/MSWProvider";
 import { Providers } from "./providers";
-import { Header } from "@/components/shared/Navbar";
+import { Navbar } from "@/components/shared/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <MSWProvider>
           <Providers>
-            <Header />
+            <Navbar />
             {children}
           </Providers>
         </MSWProvider>

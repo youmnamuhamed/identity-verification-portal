@@ -20,4 +20,3 @@ export function MSWProvider({ children }: { children: React.ReactNode }) {
 
   return <>{children}</>;
 }
-
