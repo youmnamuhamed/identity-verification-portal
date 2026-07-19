@@ -24,9 +24,6 @@ export default function VerificationsPage() {
               Track the status of submitted identity verifications.
             </p>
           </div>
-          <Link href="/">
-            <Button variant="secondary">New Verification</Button>
-          </Link>
         </div>
 
         <Card>
